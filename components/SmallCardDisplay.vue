@@ -1,15 +1,15 @@
 <template>
     <div class="container">
-    <h3 class="header">{{}}</h3>
+    <h3 class="header">{{cardSection.title}}</h3>
     <div class="card-container">
-        <SmallCard />
+        <SmallCard v-for="card in cardSection.cards" :key="card.id" :card="card"/>
     </div>
     </div>
 </template>
 
 <script>
     export default {
-        
+        props: ['cardSection']
     }
 </script>
 

@@ -1,12 +1,12 @@
 <template>
     <div class="card-container">
-        <img src="" alt="fire extinguisher" class="image">
+        <img :src="require(`@/assets/images/${card.image || 'fe1.jpg'}`)" alt="fire extinguisher" class="image">
     </div>
 </template>
 
 <script>
     export default {
-        
+        props: ['card']
     }
 </script>
 
